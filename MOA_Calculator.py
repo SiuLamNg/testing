@@ -9,3 +9,6 @@
 # The calculator will be output the needed
 # moves(clicks) to the user based on their 
 # zeroing result.
+
+def targetdistance(distance):
+  print("Target Distance is: " + distance)
