@@ -10,5 +10,10 @@
 # moves(clicks) to the user based on their 
 # zeroing result.
 
+
 def targetdistance(distance):
-  print("Target Distance is: " + distance)
+  print("Target Distance is: " + distance + "m.")
+  
+targetdistance("500")
+
+def MOA_Calculation()
