@@ -55,7 +55,6 @@ def intToString (moaclick):
     result = str(moaclick)
     return result
 
-UserInput()
 VerticalMOA_adjustment()
 HorizontalMOA_adjustment()
 VerticalAdjustment = VerticalMOA_adjustment()
