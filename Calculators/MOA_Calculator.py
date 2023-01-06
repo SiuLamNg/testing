@@ -9,8 +9,8 @@
 # [The calculator will be output the needed
 # moves(clicks) to the user based on their 
 # zeroing result.] - # int clicks
-
 import math
+HundredYard = 100
 
 def UserInput():
     TargetDistance = float(input("What's your zeroing distance?"))
@@ -18,7 +18,6 @@ def UserInput():
 
 def MOAscaling():
     Input = UserInput()
-    HundredYard = 100
     ConvertedDistance  = (HundredYard/Input) 
     return ConvertedDistance
 
@@ -33,6 +32,7 @@ VerticalLength = VerticalShift()
 def HorizontalShift():
     HorizontalShift = float(input("What's the horizontal distance(by avg.)?"))
     return HorizontalShift
+
 HorizontalLength = HorizontalShift()
 
 def OpticsMOA():
@@ -55,16 +55,19 @@ def intToString (moaclick):
     result = str(moaclick)
     return result
 
-
 UserInput()
 VerticalMOA_adjustment()
 HorizontalMOA_adjustment()
 VerticalAdjustment = VerticalMOA_adjustment()
 HorizontalAdjustment = HorizontalMOA_adjustment()
 
+def seperation():
+    print("\n" + "Output:")
+    
 def template():
     AdjustedVertical = intToString(VerticalAdjustment)
     AdjustedHorizontal = intToString(HorizontalAdjustment)
+    seperation()
     print("The needed vertical adjustment is: ", AdjustedVertical, " clicks.")
     print("The needed horizontal adjustment is: ", AdjustedHorizontal, " clicks.")
     
