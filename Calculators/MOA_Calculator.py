@@ -11,45 +11,61 @@
 # zeroing result.] - # int clicks
 
 import math
-Ratio = 1.0936132983 # 1 meter equals to = 1.0936132983 yards.
-
-def MetricsToImperial(input):
-  Yard = Ratio*input
-  return Yard
-
-def ImperialToMetrics(input):
-  Meter = 1/Ratio
-  return Meter
 
 def UserInput():
-  TargetDistance = float(input("What's your zeroing distance?"))
-  VerticalShift = float(input("What's the vertical distance(by avg.)?"))  
-  HorizontalShift = float(input("What's the horizontal distance(by avg.)?"))
-  MoaPerClick = float(input("What's the MOA per click on the optics?"))
-  return TargetDistance, VerticalShift, HorizontalShift, MoaPerClick
+    TargetDistance = float(input("What's your zeroing distance?"))
+    return TargetDistance
 
-#def DistanceConversion(TargetDistance):
-    Hundredyards = 100
-    ConvertedDistance = TargetDistance/Hundredyards 
+def MOAscaling():
+    Input = UserInput()
+    HundredYard = 100
+    ConvertedDistance  = (HundredYard/Input) 
     return ConvertedDistance
 
+Scaling = MOAscaling()
+
+def VerticalShift():
+    VerticalShift = float(input("What's the vertical distance(by avg.)?"))  
+    return VerticalShift
+
+VerticalLength = VerticalShift()
+
+def HorizontalShift():
+    HorizontalShift = float(input("What's the horizontal distance(by avg.)?"))
+    return HorizontalShift
+HorizontalLength = HorizontalShift()
+
+def OpticsMOA():
+    MoaPerClick = float(input("What's the MOA per click on the optics?")) 
+    return MoaPerClick
+
+OpticsNotch = OpticsMOA()
+      
+def VerticalMOA_adjustment(): 
+    VerticalClicks = ((Scaling*VerticalLength)/OpticsNotch)
+    AdjustedVerticalClicks = math.ceil(VerticalClicks)
+    return AdjustedVerticalClicks
+
+def HorizontalMOA_adjustment():
+    HorizontalClicks = ((Scaling*HorizontalLength)/OpticsNotch)
+    AdjustedHorizontalClicks = math.ceil(HorizontalClicks)
+    return AdjustedHorizontalClicks
+
+def intToString (moaclick):
+    result = str(moaclick)
+    return result
+
+
+UserInput()
+VerticalMOA_adjustment()
+HorizontalMOA_adjustment()
+VerticalAdjustment = VerticalMOA_adjustment()
+HorizontalAdjustment = HorizontalMOA_adjustment()
+
+def template():
+    AdjustedVertical = intToString(VerticalAdjustment)
+    AdjustedHorizontal = intToString(HorizontalAdjustment)
+    print("The needed vertical adjustment is: ", AdjustedVertical, " clicks.")
+    print("The needed horizontal adjustment is: ", AdjustedHorizontal, " clicks.")
     
-#def AdjustmentCalculation(VerticalShift, HorizontalShift):
-    Shift = ConvertedDistance/MoaPerClick
-    return Shift
-    
-
-
-
-## 1 MOA = 1 inches in 100 yards
-## 1 cm =  0.393701 inches
-## 1 inches = 2.5399986284cm
-
-## 500 yards, 5 inches, 4 inches, 0.5 moa per click
-## 
-## 100yards/TargetDiatance => converted distance
-## 5
-## converted distance/MoaPerClick - > (VerticalShift, Horizontal Shift)
-## 5/0.5
-## 10
-##
+template()
