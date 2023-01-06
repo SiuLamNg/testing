@@ -51,7 +51,6 @@ public class Webnetwork {
         host.close();
       }
     }
-
     public static void main (String args[]){
       Question();
       AnswerHandling();

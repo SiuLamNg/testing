@@ -12,18 +12,20 @@ public class backup {
      for(i=0;i<5;i++){
          System.out.println("trial");
          count ++;
-         while(3<count){
+         if(3<count){
           for(j=0;j<3;j++){
-            int length = j;
-            k++;
-              while(length==count && k==2){
-                    System.out.println(k);
+            int length = k++;
+              while(length==3){
+                    System.out.println(length);
                   break;
               }
             }
           }
         } 
       }     
+      public static checker(){
+        
+      }
     }
 
 
