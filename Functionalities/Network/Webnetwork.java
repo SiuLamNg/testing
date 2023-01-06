@@ -10,6 +10,7 @@ import static java.lang.Math.*;
 
 public class Webnetwork { 
     public static int CorrectAnswer = 7;
+    public static int trials = 0;
 
     public static void Question(){
       System.out.println("How many Access Points in the server now?");
@@ -22,9 +23,23 @@ public class Webnetwork {
     }
 
     public static void AnswerChecking(int answer){
-       if (answer == CorrectAnswer){
+      int count;
+      int looping = 0;
+        if (answer == CorrectAnswer){
           GoodEnding();
-       } 
+       } else{
+          for (count=0;0<trials;count++){
+                if (answer == CorrectAnswer){
+                  GoodEnding();
+                  break;
+                }
+                else{
+                    trials++;
+                    BadEnding(); 
+                  }
+              }
+          }
+
     }
 
     public static void AnswerHandling (){
