@@ -39,7 +39,6 @@ public class Webnetwork {
                   }
               }
           }
-
     }
 
     public static void AnswerHandling (){
