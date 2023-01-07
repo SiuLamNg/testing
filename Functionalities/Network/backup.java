@@ -9,12 +9,15 @@ public class backup {
   public static int i,j,k;
   public static int status = 3;
   public static int marker = 0;
-  public static String confirmation;
+  public static boolean confirmation;
+  public static boolean correctstatus = true;
     public static void main (String args[]){
     boolean localchecker = checker(status);      // checking if the length is 3       
-    confirmation = new Boolean(localchecker).toString(localchecker); 
-                                                // reassign checker variable to confirmation.
-     System.out.println(confirmation);
+    confirmation = localchecker;
+    if (confirmation = correctstatus){
+      System.out.println("Status: " + confirmation);
+      System.out.println("Test_1 passed.");
+      }
     }     
 
     public static boolean checker(int count){
