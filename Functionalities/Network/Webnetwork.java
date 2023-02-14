@@ -27,18 +27,7 @@ public class Webnetwork {
       int looping = 0;
         if (answer == CorrectAnswer){
           GoodEnding();
-       } else{
-          for (count=0;0<trials;count++){
-                if (answer == CorrectAnswer){
-                  GoodEnding();
-                  break;
-                }
-                else{
-                    trials++;
-                    BadEnding(); 
-                  }
-              }
-          }
+       } 
     }
 
     public static void AnswerHandling (){
