@@ -10,10 +10,7 @@ import static java.lang.Math.*;
 
 public class Webnetwork { 
     public static int CorrectAnswer = 7;
-    public static int trials = 0;
-    public static boolean confirmation;
-    public static boolean correctstatus = true;
-
+    
     public static void Question(){
       System.out.println("How many Access Points in the server now?");
     }
@@ -39,7 +36,7 @@ public class Webnetwork {
             break;
           }
           break;
-       } while (answer != CorrectAnswer);
+        } while (answer != CorrectAnswer);
       }
     }
     
