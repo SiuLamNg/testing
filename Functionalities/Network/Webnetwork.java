@@ -1,16 +1,11 @@
 package Network;
 // Functions used in the in files.
 import java.util.Scanner;
-import java.util.*;
-import java.util.random.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import static java.lang.Math.*;
 // Functions used in the in files.
 
 public class Webnetwork { 
     public static int CorrectAnswer = 7;
-    
+
     public static void Question(){
       System.out.println("How many Access Points in the server now?");
     }
@@ -22,8 +17,6 @@ public class Webnetwork {
     }
 
     public static void AnswerChecking(int answer){
-      int count;
-      int looping = 0;
       if (answer == CorrectAnswer){
         GoodEnding();
       }else if(answer != CorrectAnswer){
