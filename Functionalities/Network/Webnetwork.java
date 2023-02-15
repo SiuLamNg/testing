@@ -11,6 +11,8 @@ import static java.lang.Math.*;
 public class Webnetwork { 
     public static int CorrectAnswer = 7;
     public static int trials = 0;
+    public static boolean confirmation;
+    public static boolean correctstatus = true;
 
     public static void Question(){
       System.out.println("How many Access Points in the server now?");
@@ -25,11 +27,22 @@ public class Webnetwork {
     public static void AnswerChecking(int answer){
       int count;
       int looping = 0;
-        if (answer == CorrectAnswer){
-          GoodEnding();
-       } 
+      if (answer == CorrectAnswer){
+        GoodEnding();
+      }else if(answer != CorrectAnswer){
+        do {
+          BadEnding();
+          Question();
+          AnswerHandling();
+          if (answer == CorrectAnswer){
+            GoodEnding();
+            break;
+          }
+          break;
+       } while (answer != CorrectAnswer);
+      }
     }
-
+    
     public static void AnswerHandling (){
       Scanner host = new Scanner(System.in);
       try{
