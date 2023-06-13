@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Webnetwork { 
     public static int CorrectAnswer = 7;
-
     public static void Question(){
       System.out.println("How many Access Points in the server now?");
     }
@@ -15,7 +14,6 @@ public class Webnetwork {
     public static void BadEnding(){
       System.out.println("This is not the correct answer, please try again.");
     }
-
     public static void AnswerChecking(int answer){
       if (answer == CorrectAnswer){
         GoodEnding();
@@ -32,7 +30,6 @@ public class Webnetwork {
         } while (answer != CorrectAnswer);
       }
     }
-    
     public static void AnswerHandling (){
       Scanner host = new Scanner(System.in);
       try{
