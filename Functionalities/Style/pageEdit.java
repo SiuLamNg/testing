@@ -1,4 +1,4 @@
-package Network;
+package Style;
 import java.util.Scanner;
 
 public class pageEdit { 
