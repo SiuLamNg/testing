@@ -5,7 +5,7 @@
 # 3. Horizontal Shift
 # 4. MOA Adjustment Unit(per click) 
 # 
-# Output Requirment:
+# Output Requirement:
 # [The calculator will be output the needed
 # moves(clicks) to the user based on their 
 # zeroing result.] - # int clicks
