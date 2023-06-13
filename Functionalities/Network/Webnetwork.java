@@ -47,27 +47,3 @@ public class Webnetwork {
       AnswerHandling();
     }
 }
-
-
-
-// first the user have to be input the answer,
-// check if it's 7, if it's 7 return a statment, end the program.
-// if it isn't 7, return a statment and ask them to answer it again,
-// until they are correct.
-// 1. QuestionRelease
-// 2. Handling
-// 3. Reconstruction
-// void 
-// static
-// static void
-// public
-// public void
-// public static void 
-// public static String
-// private 
-// private void
-// private static
-// private static void
-// class
-// enum 
-// struct
