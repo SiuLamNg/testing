@@ -21,7 +21,3 @@ def layout():
   print(str(TotalSize))
   
 layout()
-  
-     
-  
-  
