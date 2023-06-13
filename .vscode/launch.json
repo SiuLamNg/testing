@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "backup",
+      "request": "launch",
+      "mainClass": "Network.backup",
+      "projectName": "testing_f5bbf7a4"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
