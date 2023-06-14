@@ -4,6 +4,31 @@
 # include <string>
 
 using namespace std;
+class Direction{
+  private: 
+         double x_axis;
+         double y_axis;
+         double z_axis;
+  public:
+         void vectors(double x, double y, double z){
+             x_axis = x;
+             y_axis = y;
+             z_axis = z;
+  }
+  double calculation();
+};
+
+double Direction::calculation(){
+   double originVar = ((x_axis-y_axis)/2*z_axis);
+   double Var = -1; 
+   double posVar; 
+    if (originVar<0){
+      posVar = originVar*Var;
+      return posVar;
+    } else{
+      return originVar;
+    }
+}
 
 int main (){
   int insert_number = 6;
@@ -15,13 +40,17 @@ int main (){
       cout << "You hit the target" << "\n";
       while (insert_number<id_number){
            int new_id_number = max(id_number, 1000);
-           cout << new_id_number << "\n";
+           if (new_id_number=1000){
+                cout << "Jackpot, within the gap" << "\n";
+           }
            break;
       }
       break;
     }
     cout << i << "\n";
   }
+  Direction direction1;
+  direction1.vectors(200, 500, 700);
+  cout << "Area is: " << direction1.calculation() << endl;
   return 0;
 }
-
