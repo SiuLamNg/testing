@@ -8,7 +8,7 @@ $word_list = fopen($word_list_file, 'r');
 if ($word_list){
   while (($line =fgets($word_list))!== false){
 
-      $temp_hash = md5(trim($line), $salt);
+      $temp_hash = md5(trim($line) . $salt);
           if ($temp_hash == $hash) {
             echo trim($line);
             break;
@@ -17,7 +17,8 @@ if ($word_list){
   fclose($word_list);
 
 } else {
-    echo "Error";
+    echo "Error.";
 
 }
+
 ?>
