@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "backup",
+      "request": "launch",
+      "mainClass": "Network.backup",
+      "projectName": "testing_70d12303"
+    },
+    {
+      "type": "java",
+      "name": "Webnetwork",
+      "request": "launch",
+      "mainClass": "Network.Webnetwork",
+      "projectName": "testing_70d12303"
+    },
+    {
+      "type": "java",
       "name": "Webnetwork",
       "request": "launch",
       "mainClass": "Network.Webnetwork",
