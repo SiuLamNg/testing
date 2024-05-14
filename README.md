@@ -8,3 +8,4 @@
 # TypeScript, Angular, AWS, Google Cloud Platform
 # React, React Native Testing Libraries
 # Data Visualization, Statistical Computing
+# ETL Extractions, Data Transformation
